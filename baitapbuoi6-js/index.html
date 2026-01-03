@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>10 bài tập mảng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 p-6">
+
+<div class="max-w-4xl mx-auto space-y-4">
+
+<!-- ===== Nhập số ===== -->
+<div class="flex gap-3">
+  <input id="numberInput" class="flex-1 border px-3 py-2 rounded" placeholder="Nhập số">
+  <button id="btnAdd" class="bg-blue-500 text-white px-5 rounded">Thêm số</button>
+</div>
+<div id="arrayDisplay" class="bg-green-100 p-3 rounded">👉</div>
+
+<!-- =====  1 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(1)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    1. Tổng số dương
+  </button>
+  <div id="content1" class="hidden p-4 space-y-3">
+    <button id="btn1" class="bg-blue-500 text-white px-4 py-2 rounded">Tính tổng</button>
+    <div id="result1" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  2 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(2)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    2. Đếm số dương
+  </button>
+  <div id="content2" class="hidden p-4 space-y-3">
+    <button id="btn2" class="bg-blue-500 text-white px-4 py-2 rounded">Đếm</button>
+    <div id="result2" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  3 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(3)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    3. Số nhỏ nhất
+  </button>
+  <div id="content3" class="hidden p-4 space-y-3">
+    <button id="btn3" class="bg-blue-500 text-white px-4 py-2 rounded">Tìm</button>
+    <div id="result3" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  4 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(4)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    4. Số dương nhỏ nhất
+  </button>
+  <div id="content4" class="hidden p-4 space-y-3">
+    <button id="btn4" class="bg-blue-500 text-white px-4 py-2 rounded">Tìm</button>
+    <div id="result4" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  5 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(5)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    5. Số chẵn cuối
+  </button>
+  <div id="content5" class="hidden p-4 space-y-3">
+    <button id="btn5" class="bg-blue-500 text-white px-4 py-2 rounded">Tìm</button>
+    <div id="result5" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  6 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(6)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    6. Đổi chỗ
+  </button>
+  <div id="content6" class="hidden p-4 space-y-3">
+    <input id="index1" class="border px-2 py-1" placeholder="Vị trí 1">
+    <input id="index2" class="border px-2 py-1" placeholder="Vị trí 2">
+    <button id="btn6" class="bg-blue-500 text-white px-4 py-2 rounded">Đổi</button>
+  </div>
+</div>
+
+<!-- ===== 7 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(7)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    7. Sắp xếp tăng
+  </button>
+  <div id="content7" class="hidden p-4 space-y-3">
+    <button id="btn7" class="bg-blue-500 text-white px-4 py-2 rounded">Sắp xếp</button>
+    <div id="result7" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- ===== 8 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(8)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    8. Nguyên tố đầu
+  </button>
+  <div id="content8" class="hidden p-4 space-y-3">
+    <button id="btn8" class="bg-blue-500 text-white px-4 py-2 rounded">Tìm</button>
+    <div id="result8" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- =====  9 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(9)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    9. Đếm số nguyên
+  </button>
+  <div id="content9" class="hidden p-4 space-y-3">
+    <button id="btn9" class="bg-blue-500 text-white px-4 py-2 rounded">Đếm</button>
+    <div id="result9" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+<!-- ===== 10 ===== -->
+<div class="bg-white rounded shadow">
+  <button onclick="toggle(10)" class="w-full text-left p-4 bg-blue-50 font-semibold">
+    10. So sánh âm dương
+  </button>
+  <div id="content10" class="hidden p-4 space-y-3">
+    <button id="btn10" class="bg-blue-500 text-white px-4 py-2 rounded">So sánh</button>
+    <div id="result10" class="bg-green-100 p-2 rounded"></div>
+  </div>
+</div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
