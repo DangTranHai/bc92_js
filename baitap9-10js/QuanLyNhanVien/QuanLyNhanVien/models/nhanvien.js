@@ -1,0 +1,48 @@
+export function NhanVien(
+  tk,
+  ten,
+  email,
+  matKhau,
+  ngayLam,
+  luongCB,
+  chucVu,
+  gioLam
+) {
+  this.taiKhoan = tk;
+  this.hoTen = ten;
+  this.email = email;
+  this.matKhau = matKhau;
+  this.ngayLam = ngayLam;
+  this.luongCB = luongCB;
+  this.chucVu = chucVu;
+  this.gioLam = gioLam;
+  this.tongLuong = 0;
+  this.loaiNV = "";
+
+  // Tính tổng lương
+this.tinhTongLuong = function () {
+  if (this.chucVu === "Giám đốc") {
+    this.tongLuong = this.luongCB * 3;
+  } else if (this.chucVu === "Trưởng phòng") {
+    this.tongLuong = this.luongCB * 2;
+  } else if (this.chucVu === "Nhân viên") {
+    this.tongLuong = this.luongCB * 1;
+  } else {
+    this.tongLuong = 0;
+  }
+};
+
+
+  // Xếp loại nhân viên
+  this.xepLoai = function () {
+    if (this.gioLam >= 192) {
+      this.loaiNV = "Xuất sắc";
+    } else if (this.gioLam >= 176) {
+      this.loaiNV = "Giỏi";
+    } else if (this.gioLam >= 160) {
+      this.loaiNV = "Khá";
+    } else {
+      this.loaiNV = "Trung bình";
+    }
+  };
+}
